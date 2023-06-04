@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+section
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #19172e;
+    justify-content: center;
+    align-items: center;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#f9d924, #ff2c24);
+    animation: animation1 ease 6s infinite;
+    animation-delay: 1.2s;
+
+}
+section::after
+{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#01d6ff, #0f24f9);
+    animation: animation1 ease 6s infinite;
+    animation-delay: 1.2s;
+}
+.clock{
+    position: relative;
+    width: 750px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-size:80px;
+}
+.clock .container div:nth-child(odd){
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0, 0.2);
+
+}
+#ampm{
+    position: relative;
+    top: -35px;
+    left: 10px;
+    font-size: small;
+    font-weight: 1000;
+}
+
+
+
+@keyframes animation1 {
+    0%,100%
+    {
+        transform: translateY(40px);
+    }
+    50%
+    {
+        transform: translateY(-40px);
+    }
+}
